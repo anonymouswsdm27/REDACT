@@ -1,0 +1,32 @@
+[project]
+name = "collres"
+version = "0.1.0"
+description = "Collaborative Residue in Federated Recommender Unlearning "
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "torch",
+    "scikit-learn",
+    "matplotlib",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "wandb", "hydra-core", "pyarrow"]
+
+[tool.setuptools]
+packages = ["src", "experiments"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+# E701/E702: compact single-line statements are intentional in the vectorized numeric code.
+ignore = ["E701", "E702"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

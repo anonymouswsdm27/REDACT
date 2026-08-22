@@ -1,0 +1,12 @@
+# Generality check on a SECOND dataset (ML-100K): same residue problem, different data.
+sweep_id: problem_ml100k
+backbone: mf
+dataset: ml100k
+n_users: 0             # full ML-100K (943 users)
+data_seed: 0
+dim: 32
+epochs: 30
+seeds: [0, 1, 2]
+per_stratum: 8
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent]

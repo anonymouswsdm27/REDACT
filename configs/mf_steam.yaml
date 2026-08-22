@@ -1,0 +1,13 @@
+# Confirmatory (an HPC cluster): mf on steam (games — diverse-5). 5000-user subsample (full dump is huge).
+sweep_id: mf_steam
+backbone: mf
+dataset: steam
+n_users: 5000
+data_seed: 0
+dim: 32
+epochs: 30
+
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, finetune]

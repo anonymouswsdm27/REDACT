@@ -1,0 +1,28 @@
+# raw datasets (downloaded via data/scripts/download.py — never commit)
+data/*
+!data/scripts/
+!data/scripts/**
+
+# results: SHIP the per-sweep tarballs + aggregate JSONs; IGNORE extracted unit dirs & figures
+results/units/*/
+results/figures/
+runs/
+cache/
+wandb/
+*.pt
+*.ckpt
+*.parquet
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# os / editor
+.DS_Store

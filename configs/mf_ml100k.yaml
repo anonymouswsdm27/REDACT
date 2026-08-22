@@ -1,0 +1,12 @@
+# Confirmatory (an HPC cluster): centralized GMF on full ML-100K (2nd dataset, generality). Small + fast.
+sweep_id: mf_ml100k
+backbone: mf
+dataset: ml100k
+n_users: 0             # full ML-100K (943 users)
+data_seed: 0
+dim: 32
+epochs: 30
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, finetune]

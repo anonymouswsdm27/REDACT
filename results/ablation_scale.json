@@ -1,0 +1,65 @@
+{
+  "mode": "scale",
+  "dataset": "ml1m",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "rows": [
+    {
+      "knob": 50,
+      "residue_floor": 0.6335,
+      "residue_floor_std": 0.03295906552073344,
+      "naive_leak": 0.3397,
+      "naive_leak_std": 0.029791945220142984,
+      "ours_leak": -0.1463,
+      "ours_leak_std": 0.018919830866051632,
+      "utility": 0.1626402960004879,
+      "utility_std": 0.011793075455984126,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 200,
+      "residue_floor": 0.6482,
+      "residue_floor_std": 0.0156671631127017,
+      "naive_leak": 0.29700000000000004,
+      "naive_leak_std": 0.01827293079940926,
+      "ours_leak": -0.20020000000000002,
+      "ours_leak_std": 0.021350878202078698,
+      "utility": 0.23961499720005736,
+      "utility_std": 0.01766278872982764,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 800,
+      "residue_floor": 0.6422,
+      "residue_floor_std": 0.02065574980483635,
+      "naive_leak": 0.2585,
+      "naive_leak_std": 0.01613381541979452,
+      "ours_leak": -0.121,
+      "ours_leak_std": 0.018828170383762728,
+      "utility": 0.28573756447322707,
+      "utility_std": 0.0054063596917051935,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 3000,
+      "residue_floor": 0.6939,
+      "residue_floor_std": 0.0279130793715061,
+      "naive_leak": 0.20350000000000001,
+      "naive_leak_std": 0.016501515081955357,
+      "ours_leak": -0.0738,
+      "ours_leak_std": 0.016286804474788783,
+      "utility": 0.3135869343235952,
+      "utility_std": 0.002629696902058973,
+      "n": 40.0,
+      "n_std": 0.0
+    }
+  ]
+}

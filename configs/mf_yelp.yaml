@@ -1,0 +1,14 @@
+# Confirmatory (an HPC cluster): mf on yelp (business reviews — diverse-5). 5000-user subsample.
+# Yelp is a GATED download (see data/scripts/download.py): place the review json before running.
+sweep_id: mf_yelp
+backbone: mf
+dataset: yelp
+n_users: 5000
+data_seed: 0
+dim: 32
+epochs: 30
+
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, finetune]

@@ -1,0 +1,17 @@
+# Cross-SILO federated regime: FEW clients, more local work -> each client's contribution to the
+# shared item embeddings concentrates (vs cross-device FedAvg, which dilutes it heavily).
+# Hypothesis: here naive local-delete leaks (the user's own shared contribution survives) and
+# OURS (local rollback of that contribution) reaches the floor -> a real ours > naive privacy gap.
+sweep_id: phase1_fedncf_silo
+backbone: fedncf
+dataset: ml1m
+n_users: 50            # few clients (cross-silo) -> low dilution
+data_seed: 0
+dim: 32
+fed_rounds: 25
+fed_local_epochs: 8    # more local work per client per round -> stronger per-client imprint
+fed_lr: 0.2
+seeds: [0, 1, 2]        # 3 seeds for avg±std on the ours-advantage (cross-silo) result
+per_stratum: 8
+n_controls: 40
+methods: [retrain, naive_delete, gradient_ascent, fru, ours]

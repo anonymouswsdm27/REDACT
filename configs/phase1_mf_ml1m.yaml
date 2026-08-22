@@ -1,0 +1,16 @@
+# P1 measurement sweep — MF backbone on ML-1M (§8; plan in docs/EXPERIMENT_PLAN.md).
+# On an HPC cluster set n_users: 0 (full ML-1M) and shard pairs across a an array job.
+sweep_id: phase1_mf_ml1m
+backbone: mf            # mf wired; fedncf = P1.1
+dataset: ml1m
+n_users: 2000          # 0 = full ML-1M (an HPC cluster); subsampled for CPU iteration
+data_seed: 0           # fixes the federated user subsample (separate from train seed)
+dim: 32
+epochs: 30
+ft_epochs: 5           # fine-tune unlearning: warm-start epochs on D\{(A,X)}
+seeds: [0, 1, 2]       # model-training seeds (confirmatory replication)
+per_stratum: 120       # forgotten pairs per redundancy stratum (incl. r=0 control)
+n_controls: 50         # popularity-matched controls per probe
+# retrain = oracle/ground-truth & residue floor; the rest are practical baselines vs it (§11).
+# FRU (log-rollback) + FedShare (snapshot) are faithful with the FedAvg loop -> P1.1/P1.4.
+methods: [retrain, naive_delete, gradient_ascent, finetune]

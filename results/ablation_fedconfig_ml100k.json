@@ -1,0 +1,88 @@
+{
+  "mode": "fedconfig",
+  "dataset": "ml100k",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "rows": [
+    {
+      "knob": "R5",
+      "rounds": 5,
+      "local_epochs": 3,
+      "residue_floor": 0.7216,
+      "residue_floor_std": 0.02002043400572972,
+      "naive_leak": 0.11546666666666665,
+      "naive_leak_std": 0.012295618008958403,
+      "ours_leak": -0.0168,
+      "ours_leak_std": 0.011808847906925076,
+      "utility": 0.25924994856457306,
+      "utility_std": 0.010087223388022478,
+      "n": 30.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": "R15",
+      "rounds": 15,
+      "local_epochs": 3,
+      "residue_floor": 0.7781333333333333,
+      "residue_floor_std": 0.019796295949831996,
+      "naive_leak": 0.15360000000000001,
+      "naive_leak_std": 0.014164744967700605,
+      "ours_leak": -0.09,
+      "ours_leak_std": 0.01562334435672749,
+      "utility": 0.3193954907760498,
+      "utility_std": 0.0030435189041834957,
+      "n": 30.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": "R30",
+      "rounds": 30,
+      "local_epochs": 3,
+      "residue_floor": 0.782,
+      "residue_floor_std": 0.030788165114392797,
+      "naive_leak": 0.17866666666666667,
+      "naive_leak_std": 0.018383567541572433,
+      "ours_leak": -0.20293333333333335,
+      "ours_leak_std": 0.02110123745713086,
+      "utility": 0.3419899174721369,
+      "utility_std": 0.004176523560007282,
+      "n": 30.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": "E1",
+      "rounds": 15,
+      "local_epochs": 1,
+      "residue_floor": 0.7361333333333333,
+      "residue_floor_std": 0.012244908238846748,
+      "naive_leak": 0.08786666666666668,
+      "naive_leak_std": 0.010025744638457327,
+      "ours_leak": -0.04546666666666666,
+      "ours_leak_std": 0.007594149795145669,
+      "utility": 0.2602915132426352,
+      "utility_std": 0.007577302195567263,
+      "n": 30.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": "E5",
+      "rounds": 15,
+      "local_epochs": 5,
+      "residue_floor": 0.7752000000000001,
+      "residue_floor_std": 0.017730826890537885,
+      "naive_leak": 0.16239999999999996,
+      "naive_leak_std": 0.013456762034176143,
+      "ours_leak": -0.09253333333333336,
+      "ours_leak_std": 0.02009046208195985,
+      "utility": 0.3200762266990614,
+      "utility_std": 0.002322435381020919,
+      "n": 30.0,
+      "n_std": 0.0
+    }
+  ]
+}

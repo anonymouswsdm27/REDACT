@@ -1,0 +1,17 @@
+# P1 federated sweep — FedNCF (GMF instantiation) via FedAvg on ML-1M.
+# Adds FRU + ours (P3), which need the federated per-user contribution logs.
+sweep_id: phase1_fedncf_ml1m
+backbone: fedncf
+dataset: ml1m
+n_users: 600           # federated training is heavier than centralized; keep modest locally
+data_seed: 0
+dim: 32
+fed_rounds: 20         # FedAvg communication rounds
+fed_local_epochs: 3    # local BPR epochs per client per round
+fed_lr: 0.2
+seeds: [0]
+per_stratum: 60
+n_controls: 50
+# retrain = oracle/floor; naive/gradient_ascent = baselines; FRU = federated baseline (global
+# rollback); ours = P3 on-device local rollback (reaches floor, zero collateral to others).
+methods: [retrain, naive_delete, gradient_ascent, fru, ours]

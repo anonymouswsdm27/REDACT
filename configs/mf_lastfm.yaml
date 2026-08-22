@@ -1,0 +1,13 @@
+# Confirmatory (an HPC cluster): mf on lastfm (dense diverse-5).
+sweep_id: mf_lastfm
+backbone: mf
+dataset: lastfm
+n_users: 0
+data_seed: 0
+dim: 32
+epochs: 30
+
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, finetune]

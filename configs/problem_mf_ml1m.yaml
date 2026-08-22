@@ -1,0 +1,14 @@
+# THE PROBLEM, multi-seed: centralized GMF on ML-1M. Shows the collaborative residue (forgotten
+# item stays inferable after correct unlearning, rising with redundancy) and that a practical
+# method (naive local-delete) leaks ABOVE the floor. 3 seeds -> avg±std bands.
+sweep_id: problem_mf_ml1m
+backbone: mf
+dataset: ml1m
+n_users: 600           # subsample fixed across seeds (seeds vary model-training randomness)
+data_seed: 0
+dim: 32
+epochs: 30
+seeds: [0, 1, 2]
+per_stratum: 10
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent]

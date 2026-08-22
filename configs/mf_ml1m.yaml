@@ -1,0 +1,13 @@
+# Confirmatory (an HPC cluster, full data, 5 seeds): centralized GMF on full ML-1M.
+# This is the from-scratch-retrain budget driver (§5) — shard the pairs across a an array job.
+sweep_id: mf_ml1m
+backbone: mf
+dataset: ml1m
+n_users: 0             # full ML-1M (~6040 users)
+data_seed: 0
+dim: 32
+epochs: 30
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60        # forgotten pairs per redundancy stratum (incl. r=0 control)
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, finetune]

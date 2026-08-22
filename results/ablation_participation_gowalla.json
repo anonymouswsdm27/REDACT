@@ -1,0 +1,63 @@
+{
+  "mode": "participation",
+  "dataset": "gowalla",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "rows": [
+    {
+      "knob": 1.0,
+      "residue_floor": 0.4911666666666667,
+      "residue_floor_std": 0.018807504412394063,
+      "naive_leak": 0.5063333333333334,
+      "naive_leak_std": 0.019067132861433404,
+      "ours_leak": 0.4271666666666667,
+      "ours_leak_std": 0.0093926685357369,
+      "utility": 0.3816653065547165,
+      "utility_std": 0.0013319346803062797,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 0.5,
+      "residue_floor": 0.542,
+      "residue_floor_std": 0.021920310216783014,
+      "naive_leak": 0.45683333333333326,
+      "naive_leak_std": 0.022369373904713767,
+      "ours_leak": 0.38366666666666666,
+      "ours_leak_std": 0.002248456260538652,
+      "utility": 0.38183907000256007,
+      "utility_std": 0.005331591003095669,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 0.25,
+      "residue_floor": 0.5433333333333333,
+      "residue_floor_std": 0.009428090415820642,
+      "naive_leak": 0.453,
+      "naive_leak_std": 0.011052903087726204,
+      "ours_leak": 0.3955,
+      "ours_leak_std": 0.023090402046449226,
+      "utility": 0.36415117395247254,
+      "utility_std": 0.005990013424710682,
+      "n": 40.0,
+      "n_std": 0.0
+    },
+    {
+      "knob": 0.1,
+      "residue_floor": 0.5808333333333333,
+      "residue_floor_std": 0.030442112643872508,
+      "naive_leak": 0.3495,
+      "naive_leak_std": 0.040708312009547463,
+      "ours_leak": 0.283,
+      "ours_leak_std": 0.03925769563622735,
+      "utility": 0.23668180051973398,
+      "utility_std": 0.01950018310794411,
+      "n": 40.0,
+      "n_std": 0.0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Confirmatory (an HPC cluster): fedncf on yelp (business reviews — diverse-5). 5000-user subsample.
+sweep_id: fedncf_yelp
+backbone: fedncf
+dataset: yelp
+n_users: 5000
+data_seed: 0
+dim: 32
+
+fed_rounds: 30
+fed_local_epochs: 3
+fed_lr: 0.2
+seeds: [0, 1, 2, 3, 4]
+per_stratum: 60
+n_controls: 50
+methods: [retrain, naive_delete, gradient_ascent, fru, fedshare, ours]
